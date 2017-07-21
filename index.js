@@ -6,7 +6,7 @@ function genFakeData() {
 	let randomName = faker.name.findName();
 	let date = new Date(Date.now() - Math.floor(Math.random() * monthTime));
 	let dateStr = moment(date).format("YYYY-MM-DD HH:MM:SS");
-	fs.appendFileSync('data.txt', `NULL,${dateStr},${randomName}\n`);
+	fs.appendFileSync('data.txt', `NULL,'${randomName}','${randomName}'\n`);
 }
 
 for (let i = 0; i < 2000000; i++) {
